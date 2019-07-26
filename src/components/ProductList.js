@@ -16,6 +16,7 @@ const ProductList = ({ onDelete, products }) => {
           title="Delete?" 
           // 那個 “ok” 的點擊方法，
           onConfirm={
+            // 这个 onDelete 没有，肯定有通过props传过来
             // 下面其實就是調用了 onDelete 方法
             () => onDelete(record.id)
             }>
@@ -27,7 +28,7 @@ const ProductList = ({ onDelete, products }) => {
 
   // 返回 html 內容
   return (
-    <Table 
+    <Table
       dataSource={products} 
       columns={columns} 
     />

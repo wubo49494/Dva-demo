@@ -15,16 +15,17 @@ const IndexZhuti = ({ dispatch, shujuSource }) => {
   function handleDelete(id) {
     console.log(id)
     // dispatch 像是一個提交，里面的type表示是哪个model的命名空间！是命名空间，不是仓库的文件名，是namespace,  需要注意的是 dispatch 是在组件 connect Models以后，通过 props 传入的。
+    // payload 装载，载荷，默认用这个来装数据
     dispatch({
       type: 'nameProducts/delete',
-      payload: id
+      zhuangzai: id
     })
   }
 
   return (
     <div>
       <h2>表单列表</h2>
-      {/* 標準的組件， onDelete和products 是要傳過去的 props 那邊肯定有要接收這兩個的 */}
+      {/* 标准的組件， onDelete和products 是要傳過去的 props 那邊肯定有要接收這兩個的 */}
       <ProductList 
         onDelete={handleDelete}
         products={shujuSource}
@@ -40,8 +41,13 @@ const IndexZhuti = ({ dispatch, shujuSource }) => {
 // 其中，connect（函数）（）
 // 其中， 函数 =  （） => ({})
 // 其中， 这里 =   （{命名空间}）=> ({ 变量：命名空间的数据 })
-export default connect(
+
+var a = connect(
   ({ nameProducts }) => ({
     shujuSource: nameProducts
   })
 )(IndexZhuti)
+
+
+// connect()(类)，这个方法调用之后是一个跟model双向绑定后的东西，所以要么直接导出，要么接收后再导出，
+export default a

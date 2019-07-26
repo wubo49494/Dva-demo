@@ -6,6 +6,8 @@ import IndexPage from './routes/IndexPage'
 // 下面这个 routes 文件夹放的都是各个组件的 首页，比如 User，Commont，Post之类的
 import ZujianIndex from './routes/ZujianIndex'
 
+import UsersPage from './routes/UsersPage'
+
 
 // 路由模块比较简单啦，主要是下面 这个 history  实参就是路径 /# 后面的东西，这里面是有个哈希 #的
 
@@ -23,6 +25,10 @@ function RouterConfig({ history }) {
         <Route 
           path="/products" 
           exact component={ZujianIndex} />
+
+        <Route
+          path="/users"
+          exact component={UsersPage} />
       </Switch>
     </Router>
   )

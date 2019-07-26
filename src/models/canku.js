@@ -15,7 +15,7 @@ export default {
   reducers: {
 
     // 删除方法，第一个参数是 本model仓库的 state 内容，第二个参数一般带这个 {payload: id}, 到时候谁调用和这个方法 必然会带一个 {payload：id值} 来
-    'delete'(state, {payload:id}) {
+    'delete'(state, {zhuangzai:id}) {
       console.log(id)
       return state.filter(item => item.id !== id)
     }

@@ -15,6 +15,7 @@ const app = dva()
 // 這裡很關鍵，這裡主要是存儲一個倉庫的地方，這個倉庫名叫做 products，注意這裡是加載文件名！！！ 文件名！！！
 // 現在改成 canku, 第一步 ok，现在我去canku文件看看
 app.model(require('./models/canku').default)
+app.model(require('./models/users').default)
 
 
 
