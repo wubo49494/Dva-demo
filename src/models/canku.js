@@ -1,6 +1,6 @@
 export default {
   // 这个 namespace 是命名空间的，名字，是对仓库里面的内容一个统称，这里原来是 products，我们改下
-  namespace: 'namespace-products',
+  namespace: 'nameProducts',
 
   // state 就是这个命名空间的 数据 
   state: 

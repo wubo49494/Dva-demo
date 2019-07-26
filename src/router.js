@@ -3,6 +3,7 @@ import { Router, Route, Switch } from 'dva/router'
 import IndexPage from './routes/IndexPage'
 
 // 首页！！！！组件的首页！！index
+// 下面这个 routes 文件夹放的都是各个组件的 首页，比如 User，Commont，Post之类的
 import ZujianIndex from './routes/ZujianIndex'
 
 
