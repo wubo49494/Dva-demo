@@ -49,7 +49,8 @@ const UserList = ({dispatch, usersData}) => {
   return(
     <Table
       columns={columns}
-      dataSource={usersData} />
+      dataSource={usersData}
+   />
   )
 }
 

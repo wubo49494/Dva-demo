@@ -951,5 +951,18 @@ export default {
     'delete'(state, {payload: id}) {
       return state.filter(item => item.id !== id)
     }
-  }
+  },
+  // effect: {
+  //   *effDelete({payload}, {call, put}) {
+  //     const res = yield call(effDelete, payload)
+  //     if (res.code === 200) {
+  //       yield put({
+  //         type: 'deleteUser',
+  //         payload: {
+  //           id: res.data.id
+  //         }
+  //       })
+  //     }
+  //   }
+  // }
 }
